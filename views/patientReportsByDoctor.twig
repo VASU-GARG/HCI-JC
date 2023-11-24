@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylesheets/allReports.css">
+    <title>Upload File</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+        {% if reports.length == 0 %}
+            <h1>No Reports Available</h1>
+        
+        {% else %}
+            {% for i in 1..reports.length %}
+                <div class="col-lg-4">
+                    <div class="card card-margin">
+                        <div class="card-header no-border">
+                        
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="widget-49">
+                                <div class="widget-49-title-wrapper">
+                                    <div class="widget-49-date-primary">
+                                        <span class="widget-49-date-day">{{reports[i-1].reportDate}}</span>
+                                    </div>
+                                    <div class="widget-49-meeting-info">
+                                        <h5 class="card-title">{{ reports[i-1].reportName}}</h5>
+                                    
+                                    </div>
+                                </div>
+                                <br>
+                                
+                                <ul class="widget-49-meeting-points">
+                                   
+                                </ul>
+                                <div class="widget-49-meeting-action">
+                                    <a href={{reports[i-1].reportLink}} class="btn btn-sm btn-flash-border-primary" target="_blank">View</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        </div>
+    </div>
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

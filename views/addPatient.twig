@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="stylesheets/doctor_login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="signin-signup">
+                <div>
+                  <h2 class="status">{{status}}</h2>
+                </div>
+                <form action="/addPatient" method = "POST" class="sign-in-form">
+                    <h3 class="title">Add a New Patient</h3>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Patient Email" name="patientEmail">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" placeholder="Patient Name" name="patientName">
+                    </div>
+                    {# <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="passL" name="doctorPass" >
+                        <i class="fa-solid fa-eye-slash show1" id="eye"></i>
+                    </div> #}
+                    <br>
+                    <input type="submit" value="Add" class="btn solid">
+                    <a href="/"><input style="text-align:center" value="Go Back" class="btn solid"></a>
+                </form>
+
+
+
+            </div>
+        </div>
+
+        <div class="panels-container">
+           <div class="panel left-panel">
+            <div class="content">
+                <p>Welcome Doc!! Have a Great Day Ahead...</p><br>
+            </div>
+            <img src="images/doctors_hwty.svg" class="image" alt="" srcset="">
+           </div>
+
+           <div class="panel right-panel">
+            <div class="content">
+                <p>Hey Doc!! Wanna Register...</p><br>
+                
+                <h4>One of Us?
+
+                </h4><br>
+                
+                <button class="btn transparent" id="sign-in-button">Sign In</button>
+            </div>
+            <img src="images/doctor_kw-5-l.svg" class="image" alt="" srcset="">
+           </div>
+        </div>
+    </div>
+
+</body>
+</html>
